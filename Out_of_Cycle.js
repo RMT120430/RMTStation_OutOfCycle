@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OutOfCycle
 // @namespace    https://github.com/RMT120430/RMTStation_OutOfCycle
-// @version      3.2.0
+// @version      3.2.1
 // @description  Fix and optimize YouTube playlist shuffle behavior
 // @author       RMT120430
 // @license      MIT
@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'OutOfCycle_v3.2';
+  const STORAGE_KEY = 'OutOfCycle_v3.2.1';
   const NEAR_END_THRESHOLD = 1.5;
   const DEBUG = false;
   const SCROLL_INTERVAL_MS = 1000;
