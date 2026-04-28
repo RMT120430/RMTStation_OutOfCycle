@@ -57,8 +57,7 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 ---
 
 ## Support the Author
-- Ko-fi  
-  https://ko-fi.com/rmt120430
+- [Ko-fi](https://ko-fi.com/rmt120430)
 - You are also welcome to visit my GitHub profile for more projects
 
 ---
@@ -73,8 +72,7 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 ## 使用注意事項
 
 ### 安裝步驟
-1. 先安裝瀏覽器擴充套件 **Tampermonkey**  
-   https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+1. 先安裝瀏覽器擴充套件 [**Tampermonkey竄改猴**](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 2. 前往 GreasyFork，點擊「一鍵安裝」
 3. 確認 **OutOfCycle** 腳本已在 Tampermonkey 中啟用
 
@@ -123,6 +121,5 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 ---
 
 ## 支持作者
-- Ko-fi  
-  https://ko-fi.com/rmt120430
+- [Ko-fi](https://ko-fi.com/rmt120430)
 - 也歡迎造訪我的 GitHub 主頁，查看其他有趣的專案
