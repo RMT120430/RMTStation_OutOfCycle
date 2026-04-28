@@ -6,7 +6,7 @@
 // @author       RMT120430
 // @license      MIT
 // @homepageURL  https://github.com/RMT120430/RMTStation_OutOfCycle
-// @icon         https://github.com/RMT120430/RMTStation_OutOfCycle/icon128.png
+// @icon         https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true
 // @match        https://*.youtube.com/*
 // @grant        none
 // @run-at       document-idle
