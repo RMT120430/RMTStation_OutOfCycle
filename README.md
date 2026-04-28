@@ -12,7 +12,16 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 ## Usage Notes
 
 ### Installation
-1. Install [**Tampermonkey**](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) browser extension
+1. Install **Tampermonkey** browser extension
+
+Please install the Tampermonkey browser extension using the links provided to the browser extension store (note that not all browsers may be listed).
+Note: This project was tested using Chrome. Compatibility with other browsers is not guaranteed.
+- Chrome: [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- Firefox: [Tampermonkey](https://addons.mozilla.org/zh-TW/firefox/addon/tampermonkey/)
+- Opera: [Tampermonkey](https://addons.opera.com/zh-tw/extensions/details/tampermonkey-beta/)
+- Edge: [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)  
+- Safari: [Tampermonkey](https://apps.apple.com/br/app/tampermonkey-classic/id1482490089?l=en-GB&mt=12)
+
 2. Go to [GreasyFork](https://greasyfork.org/zh-TW/scripts/575787-outofcycle) and click “Install”
 3. Ensure the **OutOfCycle** script is enabled in Tampermonkey
 
