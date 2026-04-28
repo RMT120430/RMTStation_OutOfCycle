@@ -1,4 +1,4 @@
-# [![OutOfCycle icon][https://github.com/RMT120430/RMTStation_OutOfCycle/icon128.png]] OutOfCycle
+# [![https://github.com/RMT120430/RMTStation_OutOfCycle/icon128.png]] OutOfCycle
 
 ## Purpose
 Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays and incomplete loading issues.
