@@ -2,7 +2,7 @@
 
 ## Purpose
 Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays and incomplete loading issues.
-
+![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview2.png?raw=true) ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview1.png?raw=true)
 ---
 
 ## Usage Notes
