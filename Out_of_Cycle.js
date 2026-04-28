@@ -87,7 +87,6 @@
   function getExpectedVideoCount() {
     const elements = document.querySelectorAll('.ytContentMetadataViewModelMetadataText');
     for (const el of elements) {
-      // 兼容中文「部影片」與英文「videos」格式，並剔除千分位逗號
       const match = (el.textContent || '').match(/([\d,]+)\s*(?:部影片|videos?)/i);
       if (match) return parseInt(match[1].replace(/,/g, ''), 10);
     }
@@ -133,13 +132,11 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
         break; 
       }
 
-      // 新增：偵測是否已達最後一組影片 (防範隱藏/已刪除影片導致總數未達標)
       if (currentCount > 0) {
         const lastItem = items[currentCount - 1];
         const indexEl = lastItem.querySelector('yt-formatted-string#index');
         const indexText = indexEl ? indexEl.textContent.trim() : '';
 
-        // 確認 xxx 為數字，且父容器內已無顯示中的載入圈圈 (ytd-continuation-item-renderer)
         if (/^\d+$/.test(indexText)) {
           const continuation = lastItem.parentElement.querySelector('ytd-continuation-item-renderer');
           if (!continuation || continuation.hasAttribute('hidden')) {
