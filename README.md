@@ -9,7 +9,7 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 
 ### Installation
 1. Install [**Tampermonkey**](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) browser extension
-2. Go to GreasyFork and click “Install”
+2. Go to [GreasyFork](https://greasyfork.org/zh-TW/scripts/575787-outofcycle) and click “Install”
 3. Ensure the **OutOfCycle** script is enabled in Tampermonkey
 
 ---
@@ -73,7 +73,7 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 
 ### 安裝步驟
 1. 先安裝瀏覽器擴充套件 [**Tampermonkey竄改猴**](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-2. 前往 GreasyFork，點擊「一鍵安裝」
+2. 前往 [GreasyFork](https://greasyfork.org/zh-TW/scripts/575787-outofcycle)，點擊「安裝」
 3. 確認 **OutOfCycle** 腳本已在 Tampermonkey 中啟用
 
 ---
