@@ -1,8 +1,12 @@
 # ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle
 
+---
+
 ## Purpose
 Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays and incomplete loading issues.
+
 ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview2.png?raw=true) ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview1.png?raw=true)
+
 ---
 
 ## Usage Notes
@@ -64,8 +68,12 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 
 # ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle
 
+---
+
 ## 專案目的
 優化並修正 YouTube 播放清單的隨機播放行為，避免重複播放與載入不完整問題。
+
+![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview2.png?raw=true) ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/Preview1.png?raw=true)
 
 ---
 
