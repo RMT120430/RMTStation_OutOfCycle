@@ -12,15 +12,14 @@ Improve and fix YouTube playlist shuffle behavior by preventing duplicate plays 
 ## Usage Notes
 
 ### Installation
-1. Install **Tampermonkey** browser extension
-
-Please install the Tampermonkey browser extension using the links provided to the browser extension store (note that not all browsers may be listed).
-Note: This project was tested using Chrome. Compatibility with other browsers is not guaranteed.
+1. Please install the **Tampermonkey** browser extension using the links provided to the browser extension store (note that not all browsers may be listed).
 - Chrome: [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 - Firefox: [Tampermonkey](https://addons.mozilla.org/zh-TW/firefox/addon/tampermonkey/)
 - Opera: [Tampermonkey](https://addons.opera.com/zh-tw/extensions/details/tampermonkey-beta/)
 - Edge: [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)  
 - Safari: [Tampermonkey](https://apps.apple.com/br/app/tampermonkey-classic/id1482490089?l=en-GB&mt=12)
+
+Note: This project was tested using Chrome. Compatibility with other browsers is not guaranteed.
 
 2. Go to [GreasyFork](https://greasyfork.org/zh-TW/scripts/575787-outofcycle) and click “Install”
 3. Ensure the **OutOfCycle** script is enabled in Tampermonkey
@@ -89,7 +88,15 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 ## 使用注意事項
 
 ### 安裝步驟
-1. 先安裝瀏覽器擴充套件 [**Tampermonkey竄改猴**](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+1. 先安裝瀏覽器擴充套件 Tampermonkey竄改猴，這邊附上瀏覽器的商店連結（或許沒有詳盡列出每一種瀏覽器）
+- Chrome: [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- Firefox: [Tampermonkey](https://addons.mozilla.org/zh-TW/firefox/addon/tampermonkey/)
+- Opera: [Tampermonkey](https://addons.opera.com/zh-tw/extensions/details/tampermonkey-beta/)
+- Edge: [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)  
+- Safari: [Tampermonkey](https://apps.apple.com/br/app/tampermonkey-classic/id1482490089?l=en-GB&mt=12)
+
+註：我測試使用的瀏覽器是Chrome，其他瀏覽器可能無法保證能100%運行順利
+
 2. 前往 [GreasyFork](https://greasyfork.org/zh-TW/scripts/575787-outofcycle)，點擊「安裝」
 3. 確認 **OutOfCycle** 腳本已在 Tampermonkey 中啟用
 
