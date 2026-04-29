@@ -1,4 +1,4 @@
-# ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle
+# ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle v3.5.0
 
 ---
 
@@ -37,7 +37,7 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 ### Playback Behavior
 - Automatically switches to the next video **1.5 seconds before** the current one ends  
   (Reducing this time is not recommended due to loading delays)
-- When revisiting the same playlist, press **NEXT** to continue the previous shuffle cycle
+- When revisiting the same playlist, press **NEXT/PREV** to continue the previous shuffle cycle
 - To return to single-track repeat, press **STOP** to terminate the shuffle script
 
 ---
@@ -45,7 +45,7 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 ## Shuffle Logic
 
 ### Auto Loading & Detection
-- Automatically scrolls to the bottom of the playlist to load all videos
+- Automatically scrolls to the bottom of the playlist to load all videos, and exclude Recommended videos from the playlist.
 - Continuously checks loading status and starts shuffle playback once complete
 
 ### No Duplicate Playback
@@ -74,7 +74,7 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 
 ---
 
-# ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle
+# ![image](https://github.com/RMT120430/RMTStation_OutOfCycle/blob/main/icon128.png?raw=true) OutOfCycle v3.5.0
 
 ---
 
@@ -113,7 +113,7 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 ### 播放機制說明
 - 影片結束前 **1.5 秒** 會自動切換至下一首  
   （不建議縮短時間，避免因載入延遲導致腳本失效）
-- 下次回到同一播放清單時，可按 **NEXT** 繼續上一次的隨機迴圈
+- 下次回到同一播放清單時，可按 **NEXT/PREV** 繼續上一次的隨機迴圈
 - 若要回到單曲重播，請按 **STOP** 結束隨機播放腳本
 
 ---
@@ -121,7 +121,7 @@ Note: This project was tested using Chrome. Compatibility with other browsers is
 ## 隨機播放原理
 
 ### 自動載入與檢查
-- 自動捲動清單頁面至底部，確保所有影片皆被載入
+- 自動捲動清單頁面至底部，確保所有影片皆被載入，並且從播放清單內排除推薦影片
 - 持續檢查載入狀態，完成後自動開始隨機播放
 
 ### 不重複隨機
