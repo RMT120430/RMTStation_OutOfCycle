@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OutOfCycle
 // @namespace    https://github.com/RMT120430/RMTStation_OutOfCycle
-// @version      3.2.1
+// @version      3.5.0
 // @description  Fix and optimize YouTube playlist shuffle behavior
 // @author       RMT120430
 // @license      MIT
@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'OutOfCycle_v3.2.1';
+  const STORAGE_KEY = 'OutOfCycle_v3.5.0';
   const NEAR_END_THRESHOLD = 1.5;
   const DEBUG = false;
   const SCROLL_INTERVAL_MS = 1000;
@@ -104,9 +104,9 @@
     const expectedCount = getExpectedVideoCount();
 
     while (stableCount < SCROLL_STABLE_REQUIRED && Date.now() - start < MAX_WAIT_TIME) {
-      const countBeforeBounce = document.querySelectorAll('ytd-playlist-video-renderer').length;
+      const countBeforeBounce = document.querySelectorAll('ytd-playlist-video-list-renderer ytd-playlist-video-renderer').length;
       for (let i = 0; i < 5; i++) {
-        const items = document.querySelectorAll('ytd-playlist-video-renderer');
+       const items = document.querySelectorAll('ytd-playlist-video-list-renderer ytd-playlist-video-renderer');
         if (items.length > 0) {
           items[items.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
@@ -118,13 +118,13 @@
       }
 
     // Final scroll to bottom after bounce cycles
-      const latest = document.querySelectorAll('ytd-playlist-video-renderer');
+      const latest = document.querySelectorAll('ytd-playlist-video-list-renderer ytd-playlist-video-renderer');
       if (latest.length > 0) {
         latest[latest.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       await sleep(SCROLL_INTERVAL_MS);
 
-const items = document.querySelectorAll('ytd-playlist-video-renderer');
+      const items = document.querySelectorAll('ytd-playlist-video-list-renderer ytd-playlist-video-renderer');
       const currentCount = items.length;
 
       if (expectedCount && currentCount >= expectedCount) {
@@ -154,17 +154,17 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
       }
     }
 
-    window.scrollTo(0, 0);
-    const finalCount = document.querySelectorAll('ytd-playlist-video-renderer').length;
+  window.scrollTo(0, 0);
+    const finalCount = document.querySelectorAll('ytd-playlist-video-list-renderer ytd-playlist-video-renderer').length;
     log('Playlist page fully loaded. Total items:', finalCount);
   }
 
   // ─── /playlist page: collect videoIds ────────────────────────────────────────
   function collectVideoIdsFromPlaylistPage() {
     const seen = new Set();
-    const ids = [];
+    const ids =[];
     document.querySelectorAll(
-      'ytd-playlist-video-renderer a#video-title[href*="watch?v="]'
+      'ytd-playlist-video-list-renderer ytd-playlist-video-renderer a#video-title[href*="watch?v="]'
     ).forEach(a => {
       try {
         const url = new URL(a.href, location.origin);
@@ -207,6 +207,14 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
       log('Full cycle complete — reshuffling');
       state.queue = fisherYates(state.queue);
     }
+    saveState();
+    updateUI();
+    clickPlaylistItem(state.queue[state.currentIndex]);
+  }
+
+    function playPrevious() {
+    if (!state.active || state.queue.length === 0) return;
+    state.currentIndex = (state.currentIndex - 1 + state.queue.length) % state.queue.length;
     saveState();
     updateUI();
     clickPlaylistItem(state.queue[state.currentIndex]);
@@ -291,7 +299,7 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
   font-size: 18px; font-weight: bold; color: #7780A6; cursor: pointer;
 }
 #yts-status { margin-top: 10px; margin-bottom: 14px; font-size: 14px; color: #677D6A; }
-#yts-actions { display: flex; flex-direction: column; gap: 10px; }
+#yts-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding-top: 0px; padding-bottom: 14px; }
 #yts-panel button {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 14px; border-radius: 0px; border: 1px solid #B6C1D7;
@@ -337,6 +345,11 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
     actions.id = 'yts-actions';
     actions.style.display = 'none';
 
+    const btnPrev = document.createElement('button');
+    btnPrev.id = 'yts-prev';
+    btnPrev.appendChild(createIcon('M6 6h2v12H6zm3.5 6l8.5 6V6z'));
+    btnPrev.appendChild(document.createTextNode(' PREV'));
+
     const btnNext = document.createElement('button');
     btnNext.id = 'yts-next';
     btnNext.appendChild(createIcon('M6 5v14l8-7zM14 5v14h2V5z'));
@@ -361,9 +374,11 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
       actions.classList.toggle('yts-hidden', collapsed);
     };
 
+    actions.appendChild(btnPrev);
     actions.appendChild(btnNext);
     actions.appendChild(btnStop);
     actions.appendChild(btnReshuffle);
+
     ui.appendChild(header);
     ui.appendChild(status);
     ui.appendChild(btnStart);
@@ -374,12 +389,13 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
       btnStart.style.display = 'none';
       await startShuffle();
       if (state.active) {
-        actions.style.display = 'block';
+        actions.style.display = 'grid';
       } else {
         btnStart.style.display = 'block';
       }
     };
 
+    btnPrev.onclick = playPrevious;
     btnNext.onclick = playNext;
 
     btnStop.onclick = () => {
@@ -438,7 +454,7 @@ const items = document.querySelectorAll('ytd-playlist-video-renderer');
         const startBtn = document.getElementById('yts-start');
         const actionsEl = document.getElementById('yts-actions');
         if (startBtn) startBtn.style.display = 'none';
-        if (actionsEl) actionsEl.style.display = 'block';
+        if (actionsEl) actionsEl.style.display = 'grid';
         updateUI();
         setStatus(`↩ Resumed: ${state.currentIndex + 1} / ${state.queue.length}`);
         log('Session restored');
